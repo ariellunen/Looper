@@ -21,13 +21,13 @@ import Cursor from "./Components/Cursor";
 
 const App = () => {
 	const audio = [
-		{ track: track1, color: "#e3342f", audioRef: null },
-		{ track: track2, color: "#f6993f", audioRef: null },
-		{ track: track3, color: "#ffed4a", audioRef: null },
-		{ track: track4, color: '#38c172', audioRef: null },
-		{ track: track5, color: '#4dc0b5', audioRef: null },
-		{ track: track6, color: '#3490dc', audioRef: null },
-		{ track: track7, color: '#6574cd', audioRef: null },
+		// { track: track1, color: "#e3342f", audioRef: null },
+		// { track: track2, color: "#f6993f", audioRef: null },
+		// { track: track3, color: "#ffed4a", audioRef: null },
+		// { track: track4, color: '#38c172', audioRef: null },
+		// { track: track5, color: '#4dc0b5', audioRef: null },
+		// { track: track6, color: '#3490dc', audioRef: null },
+		// { track: track7, color: '#6574cd', audioRef: null },
 		{ track: track8, color: "#9561e2", audioRef: null },
 		{ track: track9, color: "#f66d9b", audioRef: null },
 	];
@@ -43,7 +43,6 @@ const App = () => {
 
 	const loop = () => {
 		setLoop(!isLoop)
-		audio.forEach((track) => (track.audioRef.loop = isLoop));
 	};
 
 	console.log(isLoop)
@@ -70,7 +69,7 @@ const App = () => {
 			>
 				<Toolbar>
 					<Typography variant="h4" color="inherit" noWrap>
-						Company name
+						Moveo name
 					</Typography>
 				</Toolbar>
 			</AppBar>

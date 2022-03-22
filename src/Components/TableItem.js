@@ -15,6 +15,7 @@ const TableItem = (props) => {
 	useEffect(() => {
 		if (!props.data.audioRef) {
 			props.data.audioRef = audioRef.current;	
+
 		}
 		if (props.play) {
 			playAudio();
@@ -23,8 +24,10 @@ const TableItem = (props) => {
 		}
 		console.log(props.isLoop)
 		loop = props.isLoop;
+		audioRef.current.loop = false;
 
 	}, [props, props.currTime, props.isLoop]);
+
 
 	const playAudio = () => {
 		props.handleTimer(audioRef.current.duration, audioRef.current.currentTime)
@@ -35,7 +38,9 @@ const TableItem = (props) => {
 		audioRef.current.pause();
 	};
 
+
 	const handleUpdate = () => {
+		console.log(props.currTime);
 		props.setCurrTime(audioRef.current.currentTime);
 	};
 
@@ -56,10 +61,9 @@ const TableItem = (props) => {
 						src={props.data.track}
 						onTimeUpdate={handleUpdate}
 						muted={mute}
-						loop={loop}
+						loop={props.isLoop}
 					/>
 					<div>{props.data.track.slice(14, props.data.track.length - 25)}</div>
-
 					<Button onClick={handleMute}>
 						{!mute && <VolumeUpIcon sx={{ color: 'black' }}/>}
 						{mute && <VolumeMuteIcon sx={{ color: 'white' }}/>}
