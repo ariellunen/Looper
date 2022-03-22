@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
@@ -6,44 +6,47 @@ import Button from "@mui/material/Button";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeMuteIcon from "@mui/icons-material/VolumeMute";
 
-let loop;
-
 const TableItem = (props) => {
 	const [mute, setMute] = useState(false);
 	const audioRef = useRef();
 
-	useEffect(() => {
-		if (!props.data.audioRef) {
-			props.data.audioRef = audioRef.current;	
+	const playAudio = useCallback(() => {
+		props.handleTimer(audioRef.current.duration, audioRef.current.currentTime)
+		audioRef.current.play();
+	});
 
+	const pauseAudio = () => {
+		audioRef.current.pause();
+	};
+
+	useEffect(() => {
+		//create audioRef for every audio/mp3
+		if (!props.data.audioRef) {
+			props.data.audioRef = audioRef.current;
 		}
 		if (props.play) {
 			playAudio();
 		} else {
 			pauseAudio();
 		}
-		console.log(props.isLoop)
-		loop = props.isLoop;
-		audioRef.current.loop = false;
+		//checking if loop button was pressed
+		if(props?.isLoop){
+			audioRef.current.loop = true;
+		} else{
+			audioRef.current.loop = false
+		}
 
-	}, [props, props.currTime, props.isLoop]);
+	}, [playAudio, props, props.currTime, props.isLoop]);
 
+	useState(() => {
+	}, [props.isLoop])
 
-	const playAudio = () => {
-		props.handleTimer(audioRef.current.duration, audioRef.current.currentTime)
-		audioRef.current.play();
-	};
-
-	const pauseAudio = () => {
-		audioRef.current.pause();
-	};
-
-
+	//update the current time
 	const handleUpdate = () => {
-		console.log(props.currTime);
 		props.setCurrTime(audioRef.current.currentTime);
 	};
 
+	//update mute state
 	const handleMute = () => {
 		if (mute) {
 			setMute(false);
@@ -61,12 +64,11 @@ const TableItem = (props) => {
 						src={props.data.track}
 						onTimeUpdate={handleUpdate}
 						muted={mute}
-						loop={props.isLoop}
 					/>
 					<div>{props.data.track.slice(14, props.data.track.length - 25)}</div>
 					<Button onClick={handleMute}>
-						{!mute && <VolumeUpIcon sx={{ color: 'black' }}/>}
-						{mute && <VolumeMuteIcon sx={{ color: 'white' }}/>}
+						{!mute && <VolumeUpIcon sx={{ color: 'black' }} />}
+						{mute && <VolumeMuteIcon sx={{ color: 'white' }} />}
 					</Button>
 				</TableCell>
 			</TableRow>

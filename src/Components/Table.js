@@ -21,6 +21,7 @@ const TracksTable = (props) => {
             handleTimer={props.handleTimer}
             setCurrTime={props.setCurrTime}
             currTime={props.currTime}
+            handleUpdate={props.handleUpdate}
           />
         ))}
       </Table>

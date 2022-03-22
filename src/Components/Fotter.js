@@ -6,6 +6,7 @@ import StopIcon from "@mui/icons-material/Stop";
 import ReplayIcon from "@mui/icons-material/Replay";
 import DoNotDisturbAltIcon from '@mui/icons-material/DoNotDisturbAlt';
 const Fotter = (props) => {
+	//update the play/pause button
 	const handleOnClick = () => {
 		props.handlePlay(!props.play);
 	};
