@@ -10,6 +10,7 @@ const THEME = createTheme({
    "fontSize": 24
   }
 });
+
 ReactDOM.render(
   <ThemeProvider theme={THEME}>
     <React.StrictMode>
