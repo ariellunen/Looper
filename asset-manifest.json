@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Looper/static/css/main.e6c13ad2.css",
+    "main.js": "/Looper/static/js/main.4303b7ef.js",
+    "static/media/ALL TRACK.mp3": "/Looper/static/media/ALL TRACK.0fa4445ea8455a4babf4.mp3",
+    "static/media/B VOC.mp3": "/Looper/static/media/B VOC.5ffa9906c5972f1fb03c.mp3",
+    "static/media/DRUMS.mp3": "/Looper/static/media/DRUMS.f0332952662d2e1f5d15.mp3",
+    "static/media/HE HE VOC.mp3": "/Looper/static/media/HE HE VOC.fd659059c1d55320658f.mp3",
+    "static/media/HIGH VOC.mp3": "/Looper/static/media/HIGH VOC.f09f6e03383b234370d0.mp3",
+    "static/media/JIBRISH.mp3": "/Looper/static/media/JIBRISH.d23f0b604ef55163d7e6.mp3",
+    "static/media/LEAD 1.mp3": "/Looper/static/media/LEAD 1.f8658c330b3d07661550.mp3",
+    "static/media/UUHO VOC.mp3": "/Looper/static/media/UUHO VOC.bc87006a5f29b4cfa918.mp3",
+    "static/media/_tambourine_shake_higher.mp3": "/Looper/static/media/_tambourine_shake_higher.2ceb47bfdbea6e81aae9.mp3",
+    "index.html": "/Looper/index.html",
+    "main.e6c13ad2.css.map": "/Looper/static/css/main.e6c13ad2.css.map",
+    "main.4303b7ef.js.map": "/Looper/static/js/main.4303b7ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4303b7ef.js"
+  ]
+}
