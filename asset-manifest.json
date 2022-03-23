@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Looper/static/css/main.e6c13ad2.css",
-    "main.js": "/Looper/static/js/main.4303b7ef.js",
+    "main.js": "/Looper/static/js/main.b21f6c17.js",
     "static/media/ALL TRACK.mp3": "/Looper/static/media/ALL TRACK.0fa4445ea8455a4babf4.mp3",
     "static/media/B VOC.mp3": "/Looper/static/media/B VOC.5ffa9906c5972f1fb03c.mp3",
     "static/media/DRUMS.mp3": "/Looper/static/media/DRUMS.f0332952662d2e1f5d15.mp3",
@@ -13,10 +13,10 @@
     "static/media/_tambourine_shake_higher.mp3": "/Looper/static/media/_tambourine_shake_higher.2ceb47bfdbea6e81aae9.mp3",
     "index.html": "/Looper/index.html",
     "main.e6c13ad2.css.map": "/Looper/static/css/main.e6c13ad2.css.map",
-    "main.4303b7ef.js.map": "/Looper/static/js/main.4303b7ef.js.map"
+    "main.b21f6c17.js.map": "/Looper/static/js/main.b21f6c17.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.4303b7ef.js"
+    "static/js/main.b21f6c17.js"
   ]
 }
